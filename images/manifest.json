@@ -1,0 +1,146 @@
+[
+  {
+    "number": 1,
+    "filename": "figure-5-01.jpg",
+    "title": "Transaction process",
+    "note": "Background transaction-process illustration reproduced from the report.",
+    "original_caption": "Figure 5.1  Transaction Process",
+    "asset": "media/image22.png"
+  },
+  {
+    "number": 2,
+    "filename": "figure-5-02.jpg",
+    "title": "Blockchain architecture",
+    "note": "Background blockchain architecture reproduced from the report.",
+    "original_caption": "Figure 5.2  Blockchain Architecture",
+    "asset": "media/image13.jpg"
+  },
+  {
+    "number": 3,
+    "filename": "figure-5-03.jpg",
+    "title": "Model overview",
+    "note": "Overview of the model used in the report.",
+    "original_caption": "Figure 5.3  Model Overview",
+    "asset": "media/image21.jpg"
+  },
+  {
+    "number": 4,
+    "filename": "figure-5-04.jpg",
+    "title": "Initial blockchain output",
+    "note": "Console output for the documented blockchain entry point.",
+    "original_caption": "Figure 5.4  Output of  CryptoBlockchain.js",
+    "asset": "media/image18.jpg"
+  },
+  {
+    "number": 5,
+    "filename": "figure-5-05.jpg",
+    "title": "Nonce and mining difficulty",
+    "note": "The report highlights random nonces and the mining difficulty requirement.",
+    "original_caption": "Figure 5.5  Additional functionalities",
+    "asset": "media/image5.jpg"
+  },
+  {
+    "number": 6,
+    "filename": "figure-5-06.jpg",
+    "title": "Chain validity before tampering",
+    "note": "The demonstration reports a valid chain before data modification.",
+    "original_caption": "Figure 5.6    Blockchain is valid or Not",
+    "asset": "media/image20.jpg"
+  },
+  {
+    "number": 7,
+    "filename": "figure-5-07.jpg",
+    "title": "Chain validity after tampering",
+    "note": "Changing a transaction amount causes chain validation to return false.",
+    "original_caption": "Figure 5.7  Authentication error",
+    "asset": "media/image9.jpg"
+  },
+  {
+    "number": 8,
+    "filename": "figure-5-08.jpg",
+    "title": "Mining reward",
+    "note": "Console output illustrating the prototype mining reward.",
+    "original_caption": "Figure 5.8   Mining reward",
+    "asset": "media/image15.jpg"
+  },
+  {
+    "number": 9,
+    "filename": "figure-5-09.jpg",
+    "title": "Signed transaction",
+    "note": "Demonstration output for signing and processing a transaction.",
+    "original_caption": "Figure 5.9  Unique Transaction with Signature",
+    "asset": "media/image4.jpg"
+  },
+  {
+    "number": 10,
+    "filename": "figure-5-10.jpg",
+    "title": "Conflicting pending transactions",
+    "note": "Two pending payments share a sender and exceed the example balance.",
+    "original_caption": "Figure 5 .10 10 units is deducted at the same time",
+    "asset": "media/image11.jpg"
+  },
+  {
+    "number": 11,
+    "filename": "figure-5-11.jpg",
+    "title": "Observer rejection message",
+    "note": "The observer prints an abort message for suspected double spending.",
+    "original_caption": "Figure 5.11  Aborted error",
+    "asset": "media/image17.jpg"
+  },
+  {
+    "number": 12,
+    "filename": "figure-5-12.jpg",
+    "title": "Four pending transactions",
+    "note": "The peer-alert walkthrough begins with four pending transactions.",
+    "original_caption": "Figure 5.12  Creating four new transactions in the blockchain",
+    "asset": "media/image1.jpg"
+  },
+  {
+    "number": 13,
+    "filename": "figure-5-13.jpg",
+    "title": "Chain with genesis block",
+    "note": "The report displays the initial chain and its genesis block.",
+    "original_caption": "Figure 5.13  Displaying the current blockchain with the genesis block",
+    "asset": "media/image3.jpg"
+  },
+  {
+    "number": 14,
+    "filename": "figure-5-14.jpg",
+    "title": "Mining pending transactions",
+    "note": "Console output from mining the demonstration transactions.",
+    "original_caption": "Figure 5.14  Mining blocks to perform the transactions",
+    "asset": "media/image2.jpg"
+  },
+  {
+    "number": 15,
+    "filename": "figure-5-15.jpg",
+    "title": "Double-spending warning",
+    "note": "The report shows a suspected double-spending warning and response.",
+    "original_caption": "Figure 5.15   A double spending attack occurs in the blockchain",
+    "asset": "media/image12.jpg"
+  },
+  {
+    "number": 16,
+    "filename": "figure-5-16.jpg",
+    "title": "Pending transactions reduced to two",
+    "note": "The walkthrough removes two suspicious transactions, leaving two.",
+    "original_caption": "Figure 5.16  Number of transactions reduces from four to two",
+    "asset": "media/image8.jpg"
+  },
+  {
+    "number": 17,
+    "filename": "figure-5-17.jpg",
+    "title": "Prototype genesis replacement",
+    "note": "The prototype replaces a affected block with a new genesis block. This is a model-specific demonstration, not a production consensus mechanism.",
+    "original_caption": "Figure 5.17 Block is replaced with a new genesis block",
+    "asset": "media/image10.jpg"
+  },
+  {
+    "number": 18,
+    "filename": "figure-5-18.jpg",
+    "title": "Updated address balances",
+    "note": "Balances displayed after the remaining transactions are processed.",
+    "original_caption": "Figure 5.18   Balances of each of the addresses are updated accordingly",
+    "asset": "media/image25.jpg"
+  }
+]
