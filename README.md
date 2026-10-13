@@ -6,7 +6,7 @@ An educational JavaScript blockchain project that explores how pending-transacti
 
 **Author:** Shreya Gajjar  
 **Project context:** GTU Graduate School of Engineering and Technology internship, January–April 2024  
-**Status:** Report documentation and figures available. Source code pending upload.
+**Status:** Project documentation available. Source code and replacement images pending upload.
 
 ## Security Problem
 
@@ -36,23 +36,17 @@ This example illustrates conflicting pending payments in a simplified ledger. It
 
 ### Conflicting pending payments
 
-![Two pending transactions in the double-spending demonstration](images/figure-5-10.jpg)
-
 The report highlights the same sender submitting payments to different recipients.
 
 ### Observer warning
-
-![Observer abort warning](images/figure-5-11.jpg)
 
 The observer reports a suspected double-spending attempt and asks the sender to cancel the last transaction or try again later.
 
 ### Peer response
 
-![Pending transactions reduced from four to two](images/figure-5-16.jpg)
-
 The report’s peer-alert walkthrough reduces four pending transactions to two after removing the suspicious payments.
 
-[View all 18 figures with explanations](docs/FIGURES.md).
+[Read the report demonstration notes](docs/FIGURES.md).
 
 ## What the Report Demonstrates
 
@@ -83,9 +77,9 @@ node CryptoBlockchain.js
 | `README.md` | Project overview, demonstration evidence, and documented run command |
 | `DESCRIPTION.md` | Concise project description and context |
 | `docs/DESIGN.md` | Observer logic and peer-alert workflow |
-| `docs/FIGURES.md` | All 18 report figures with explanations |
+| `docs/FIGURES.md` | Text notes on the report’s demonstration figures |
 | `docs/SOURCE.md` | Source attribution and documentation scope |
-| `images/` | Extracted blockchain figures |
+| `images/` | Reserved for replacement project images |
 | `code/` | Reserved for source upload; contains only an empty `.gitkeep` |
 
 ## Scope and Limitations

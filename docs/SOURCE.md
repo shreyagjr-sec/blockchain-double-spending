@@ -7,10 +7,9 @@ The supplied file is `201040107003_8th_Sem_Report(1).docx`. The report describes
 ## Included Material
 
 - Blockchain implementation and demonstration descriptions from the report.
-- Figures 5.1–5.18, extracted and resized for web display.
 - The report’s command `node CryptoBlockchain.js`.
 - Stated limitations, with scope clarified for readers.
 
 The full internship report includes unrelated IoT and training material. Those sections are excluded from this repository. Source code is intentionally omitted for later upload.
 
-Original figure captions are recorded in the image manifest. Figures retain the supplied report’s content and are not represented as new measurements. Any external diagrams reproduced in the report retain their original authorship; this repository does not claim their creation.
+The original extracted figure images have been removed. Text descriptions of the report demonstrations remain; replacement images will be added separately.
