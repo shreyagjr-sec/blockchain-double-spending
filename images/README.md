@@ -1,3 +1,4 @@
-# Project Images
+# Screenshots
 
-Reserved for replacement images. The original report images have been removed.
+- [Console run and test results](shreya-gajjar-execution.jpg)
+- [Dashboard overview](dashboard-overview.jpg)

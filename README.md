@@ -1,80 +1,72 @@
-# Ledger Lab — Blockchain Double-Spending Defense
+# Blockchain Double-Spending Detection
 
-**Shreya Gajjar · Educational blockchain project**
+**Shreya Gajjar**
 
-An executable JavaScript blockchain lab with signed transfers, proof-of-work mining, pending-balance reservations, and a live double-spending demonstration. Includes a local dashboard, a console demo, and automated tests.
+This project shows how a blockchain can detect an attempt to spend more money than a wallet has. It began as a JavaScript console project during my 2024 internship. I have since updated the code and added a dashboard to make the process easier to run and explain.
 
-This repository connects the original April 2024 internship report with the revised Ledger Lab implementation. The historical report describes the earlier observer/peer-alert model; the revised code prevents conflicting spending before mining and never rewrites confirmed blocks.
+## Earlier version
 
-## Run
+The first version used signed transactions, block mining, a network observer, and peer alerts. It checked suspicious payments and showed the results in the terminal. Its response to an attack involved removing transactions and changing block links.
 
-Install Node.js 20 or newer. No third-party packages are needed.
+## Changes I made
+
+| Earlier version | Updated version |
+| --- | --- |
+| Results were shown only in the terminal. | Added a dashboard for wallets, transfers, blocks, and alerts. |
+| Pending payments could reuse the same balance. | Pending transfers now reserve funds, so a second payment cannot spend them again. |
+| Attack handling changed existing blocks. | Invalid transfers are rejected before mining. Confirmed blocks stay unchanged. |
+| Transaction checks were incomplete. | Added checks for signatures, amounts, repeated transactions, and transaction order. |
+| Mining and pending transactions needed fixes. | Each block gets its own transaction list, the pool clears after mining, and the miner receives a reward. |
+| The signing code used external libraries. | Switched to Ed25519 signatures and SHA-256 hashing with Node.js. |
+| Setup and testing were incomplete. | Added run instructions, VS Code launch options, and 9 automated tests. |
+
+## Example result
+
+In the console demo, Alice starts with 100 credits and sends 70 to Bob. A second payment of 70 is blocked because only 30 credits remain available. After mining, Alice has 30, Bob has 70, and the miner receives 10. The chain passes validation, and all 9 tests pass.
+
+## Screenshots
+
+### Console demo and test results
+
+The output shows the blocked payment, final balances, chain validation, and passing tests.
+
+![Console demo run by Shreya Gajjar](images/shreya-gajjar-execution.jpg)
+
+### Dashboard
+
+The dashboard shows wallet balances, pending transfers, and the blockchain status before a transaction is submitted.
+
+![Dashboard overview](images/dashboard-overview.jpg)
+
+## Run the project
+
+You need Node.js 20 or newer. No extra packages are required.
 
 ```sh
 cd code
 node main.js
+```
+
+Run the tests:
+
+```sh
 node --test test/blockchain.test.js
+```
+
+Start the dashboard:
+
+```sh
 node server.js
 ```
 
-For the dashboard, open http://127.0.0.1:3000 while `node server.js` remains running. Alternatively, open `code/` in VS Code and select **Ledger Lab — Dashboard** under Run and Debug. The portable launch configuration uses `node` from your PATH.
+Open http://127.0.0.1:3000 and keep the server running. In VS Code, open the `code` folder and choose a Ledger Lab option from **Run and Debug**.
 
-To reproduce the named execution output:
+## Project report
 
-```sh
-cd code
-node evidence.js
-```
+[Read the blockchain section of the original report](docs/REPORT-TEXT.md). Only Chapter 5, Project II, is included. The unrelated internship and IoT sections have been removed from this version.
 
-The banner identifies the run as **Run by Shreya Gajjar**. It identifies the demonstrator, rather than claiming that a screenshot establishes source-code authorship.
+[Changes in more detail](docs/IMPLEMENTATION.md) · [Run output](evidence/run-output.txt) · [Project background](docs/SOURCE.md)
 
-## Verified demonstration
+## Current limits
 
-Alice starts with 100 LGR. A signed transfer of 70 LGR reserves her funds. A second transfer of 70 LGR is rejected. Mining confirms the first transfer and awards 10 LGR to Miner.
-
-| Wallet | Final balance |
-| --- | ---: |
-| Alice | 30 LGR |
-| Bob | 70 LGR |
-| Miner | 10 LGR |
-
-The current local execution completed successfully and **9 automated tests passed**. The exact run output, timestamps, mined hash, and test results are in [evidence/run-output.txt](evidence/run-output.txt). Timing and block hashes vary on every run.
-
-## Revised implementation
-
-- SHA-256 block hashes with previous-block links and proof of work.
-- Ed25519 signatures using Node's built-in cryptography.
-- Transaction IDs, per-sender sequence numbers, and replay rejection.
-- Pending transfers reserve funds immediately.
-- Positive safe-integer amount checks and signature validation.
-- Transaction-pool isolation, pool validation before mining, and mining rewards.
-- An observer log records accepted and blocked transfers without deleting confirmed history.
-- A responsive dashboard with wallets, a transaction pool, a block explorer, and an attack simulation.
-
-## Repository guide
-
-| Path | Contents |
-| --- | --- |
-| `code/` | Revised runnable application, dashboard, tests, and VS Code launch settings |
-| `evidence/run-output.txt` | Actual execution transcript, including the named banner and test results |
-| `docs/DESIGN.md` | Historical design described in the original report |
-| `docs/FIGURES.md` | Historical report figure notes |
-| `docs/SOURCE.md` | Report attribution and implementation history |
-| `docs/IMPLEMENTATION.md` | Changes and limits of the revised implementation |
-
-The full original Word report remains in the supplied local project files; its GitHub upload is pending. A genuine VS Code execution screenshot is shown below. The text log is a separate run and may show different timing and hashes.
-
-## Scope
-
-This is a single-process, in-memory educational simulation using demonstration credits and server-managed wallets. It has no peer-to-peer consensus, production wallet authentication, real currency, or durable storage. Restarting the server resets the ledger. The local browser preview has not been visually verified. Unit tests do not establish production security or distributed double-spending resistance.
-
-## Original project context
-
-The original report, **Preventing Double Spending Attacks in Cryptocurrency Blockchains Using Network Observer and Peer-Alert System**, was submitted by **Shreya Gajjar** for the Computer Engineering internship at GTU Graduate School of Engineering and Technology, January–April 2024. Existing report notes and repository history are retained. See [source and attribution](docs/SOURCE.md).
-
-## Execution screenshot
-
-![VS Code execution showing Run by Shreya Gajjar, attack rejection, verified chain integrity, and nine passing tests](images/shreya-gajjar-execution.jpg)
-
-This is an unmodified capture of VS Code’s Debug Console, rather than a fabricated terminal image. The named banner identifies the demonstration runner. See [the text-only original report](docs/REPORT-TEXT.md) for historical context; figures and page layout remain in the original Word file.
-
+This is a learning project with simulated credits. It runs on one computer, does not connect to a real cryptocurrency network, and keeps its data in memory. Restarting the server resets the wallets and blockchain.

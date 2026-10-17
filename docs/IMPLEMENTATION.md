@@ -1,11 +1,29 @@
-# Revised implementation notes
+# Changes made
 
-The original peer-alert prototype modified links and removed blocks after detecting suspicious transactions. The revised implementation rejects invalid transfers before mining. The observer records each accepted or rejected submission, and confirmed history stays intact.
+## Transaction checks
 
-Wallets use Node's Ed25519 key generation and signatures. Transaction IDs hash sender, recipient, integer amount, and sender sequence. Validation checks signatures, unique IDs, sequence ordering, balance sufficiency, block links, hashes, proof of work, genesis integrity, and one correctly sized reward per mined block.
+The earlier code did not fully check a sender's funds before accepting a payment. I changed it so pending transfers reserve the money they need. This stops another transfer from using the same funds.
 
-Pending transfers reserve only confirmed balances. Incoming pending credits cannot be spent until mined. Mining copies the pool, adds a reward, validates the candidate chain, appends the block, and clears pending entries. The demonstration difficulty is intentionally low.
+Transactions also have an ID and a sequence number. The code rejects repeated transfers, incorrect sequences, invalid signatures, and amounts that are zero, negative, or not whole numbers.
 
-Tests cover transfer settlement, pool clearing, rewards, pending overspending, duplicates and replay, signatures and mutation, invalid amounts, sequence gaps, reward injection, tampering, pool isolation, and observer records. Nine tests passed in the recorded execution.
+## Mining and block validation
 
-The local server keeps three demonstration wallets in memory and only listens on loopback. Browser responses omit private keys. The simulation has no persistence, multi-node consensus, authentication, transaction fees, or production security claim.
+Each mined block now has a separate copy of its transactions. Mining adds a reward and clears the pending pool, so earlier payments are not processed again.
+
+The validation code checks the block hashes, links, signatures, balances, transaction order, and rewards. It also detects changes to the genesis block.
+
+## Attack handling
+
+The earlier peer-alert example removed blocks and changed their links. I replaced this with rejection before mining. The observer records the rejected attempt while leaving confirmed blocks unchanged.
+
+## Interface and setup
+
+I added a dashboard with wallet balances, transfer controls, a block explorer, and an attack simulation. The console demo is still available. The project uses Node.js built-in cryptography, so it no longer needs the original external signing libraries.
+
+## Tests
+
+The 9 tests cover normal transfers, rewards, double spending, repeated transactions, signatures, invalid amounts, transaction order, tampering, and observer records. All passed in the recorded run.
+
+## Still to improve
+
+The project does not yet save its data or connect multiple nodes. Wallets are managed by the local demo server. These are future improvements; the current version is intended for learning and demonstrations.
