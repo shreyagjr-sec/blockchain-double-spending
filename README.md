@@ -62,7 +62,7 @@ The current local execution completed successfully and **9 automated tests passe
 | `docs/SOURCE.md` | Report attribution and implementation history |
 | `docs/IMPLEMENTATION.md` | Changes and limits of the revised implementation |
 
-The full original Word report remains in the supplied local project files; its GitHub upload is pending. A genuine VS Code execution screenshot is also pending the local folder-trust step. The text log is not presented as a screenshot.
+The full original Word report remains in the supplied local project files; its GitHub upload is pending. A genuine VS Code execution screenshot is shown below. The text log is a separate run and may show different timing and hashes.
 
 ## Scope
 
@@ -71,3 +71,10 @@ This is a single-process, in-memory educational simulation using demonstration c
 ## Original project context
 
 The original report, **Preventing Double Spending Attacks in Cryptocurrency Blockchains Using Network Observer and Peer-Alert System**, was submitted by **Shreya Gajjar** for the Computer Engineering internship at GTU Graduate School of Engineering and Technology, January–April 2024. Existing report notes and repository history are retained. See [source and attribution](docs/SOURCE.md).
+
+## Execution screenshot
+
+![VS Code execution showing Run by Shreya Gajjar, attack rejection, verified chain integrity, and nine passing tests](images/shreya-gajjar-execution.jpg)
+
+This is an unmodified capture of VS Code’s Debug Console, rather than a fabricated terminal image. The named banner identifies the demonstration runner. See [the text-only original report](docs/REPORT-TEXT.md) for historical context; figures and page layout remain in the original Word file.
+

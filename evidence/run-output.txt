@@ -2,12 +2,12 @@
  LEDGER LAB | Run by Shreya Gajjar
  Blockchain transaction integrity and double-spending defense
 ============================================================
-Executed: 2026-10-17T18:24:38.470Z
+Executed: 2026-10-17T18:29:26.820Z
 
  LEDGER LAB / double-spending defense
 
 ATTACK BLOCKED: Insufficient available funds: pending transfers already reserve this balance.
-Block mined: 0003effbd694b9c6fafba3bf4eef9ce444ff6333aec81d26f52960c3747d5480
+Block mined: 000129025bed93ff84666b23f8fd2db29390d9d00d273f51603e1be8f373ae50
 ┌─────────┬────────┐
 │ (index) │ Values │
 ├─────────┼────────┤
@@ -18,15 +18,15 @@ Block mined: 0003effbd694b9c6fafba3bf4eef9ce444ff6333aec81d26f52960c3747d5480
 Chain integrity: VERIFIED
 
 AUTOMATED VERIFICATION
-✔ signed transfer settles once, clears pool and pays reward (4.4381ms)
-✔ pending funds prevent double spending without changing history (0.9657ms)
-✔ duplicate and replayed transactions are rejected (1.6411ms)
-✔ missing, forged and mutated signatures fail (0.5136ms)
-✔ only positive safe integer amounts are accepted (0.6634ms)
-✔ sequence gaps and protocol reward injection are rejected (0.4428ms)
-✔ tampered blocks and genesis invalidate chain (0.8452ms)
-✔ pool keeps a copy and invalid pool cannot be mined (0.5629ms)
-✔ observer records rejection and leaves chain intact (3.3084ms)
+✔ signed transfer settles once, clears pool and pays reward (4.0866ms)
+✔ pending funds prevent double spending without changing history (0.924ms)
+✔ duplicate and replayed transactions are rejected (1.3707ms)
+✔ missing, forged and mutated signatures fail (0.4519ms)
+✔ only positive safe integer amounts are accepted (0.5774ms)
+✔ sequence gaps and protocol reward injection are rejected (0.4079ms)
+✔ tampered blocks and genesis invalidate chain (0.7643ms)
+✔ pool keeps a copy and invalid pool cannot be mined (0.4278ms)
+✔ observer records rejection and leaves chain intact (2.9417ms)
 ℹ tests 9
 ℹ suites 0
 ℹ pass 9
@@ -34,6 +34,6 @@ AUTOMATED VERIFICATION
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 89.3119
+ℹ duration_ms 82.7952
 
 Execution complete: demo verified and 9 tests passed.

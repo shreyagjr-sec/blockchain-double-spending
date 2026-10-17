@@ -14,4 +14,5 @@ The Ledger Lab revision was developed with AI assistance in this workspace at Sh
 
 The original repository history and report attribution are preserved. The named execution banner records who the demonstration is prepared for; it is not proof of sole authorship.
 
-The original full report is retained locally. Its GitHub upload is pending because automatic approval review could not process the large binary payload. No screenshots have been fabricated; genuine visual capture remains pending local VS Code execution approval.
+The original full report is retained locally. Its GitHub upload is pending because automatic approval review could not process the large binary payload. A genuine, unmodified VS Code Debug Console capture is included in images/shreya-gajjar-execution.jpg. A text-only extraction of the report is included in REPORT-TEXT.md; it omits figures and page layout.
+
