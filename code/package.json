@@ -1,0 +1,1 @@
+{"name":"ledger-lab","version":"2.0.0","private":true,"description":"Interactive blockchain and double-spending defense lab","scripts":{"start":"node server.js","demo":"node main.js","test":"node --test"},"engines":{"node":">=20"}}

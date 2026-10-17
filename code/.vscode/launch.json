@@ -1,0 +1,48 @@
+{
+  "configurations": [
+    {
+      "runtimeExecutable": "node",
+      "program": "${workspaceFolder}/evidence.js",
+      "internalConsoleOptions": "openOnSessionStart",
+      "name": "Ledger Lab — Evidence (Shreya Gajjar)",
+      "cwd": "${workspaceFolder}",
+      "request": "launch",
+      "type": "node",
+      "console": "internalConsole"
+    },
+    {
+      "serverReadyAction": {
+        "pattern": "Ledger Lab: (http://127.0.0.1:[0-9]+)",
+        "uriFormat": "%s",
+        "action": "openExternally"
+      },
+      "request": "launch",
+      "internalConsoleOptions": "openOnSessionStart",
+      "runtimeExecutable": "node",
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/server.js",
+      "type": "node",
+      "name": "Ledger Lab — Dashboard",
+      "console": "internalConsole"
+    },
+    {
+      "cwd": "${workspaceFolder}",
+      "type": "node",
+      "console": "internalConsole",
+      "name": "Ledger Lab — Console Demo",
+      "request": "launch",
+      "runtimeExecutable": "node",
+      "program": "${workspaceFolder}/main.js"
+    },
+    {
+      "cwd": "${workspaceFolder}",
+      "type": "node",
+      "console": "internalConsole",
+      "name": "Ledger Lab — Tests",
+      "request": "launch",
+      "runtimeExecutable": "node",
+      "program": "${workspaceFolder}/test/blockchain.test.js"
+    }
+  ],
+  "version": "0.2.0"
+}

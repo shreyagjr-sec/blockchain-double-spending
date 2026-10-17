@@ -1,0 +1,13 @@
+
+ LEDGER LAB / double-spending defense
+
+ATTACK BLOCKED: Insufficient available funds: pending transfers already reserve this balance.
+Block mined: 0002b1936ea2e075979dc2cd0401a0ecffc8aadb543cc324c072ea30653c2f50
+┌─────────┬────────┐
+│ (index) │ Values │
+├─────────┼────────┤
+│ Alice   │ 30     │
+│ Bob     │ 70     │
+│ Miner   │ 10     │
+└─────────┴────────┘
+Chain integrity: VERIFIED
