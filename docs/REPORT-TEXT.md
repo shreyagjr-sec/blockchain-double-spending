@@ -1,8 +1,8 @@
 # Original internship report — text-only transcription
 
-Submitted by **Shreya Gajjar**, April 2024.
+Submitted by **Shreya Gajjar**, .
 
-This is a text extraction from `201040107003_8th_Sem_Report.docx`, supplied by the user. It includes the complete document-body text, including its wider internship and IoT sections. Images, handwritten signatures, page layout, headers, footers, and formatting are not reproduced. Extraction may join text in tables or affect spacing. Historical statements describe the original project, not the revised Ledger Lab code. No authorship declarations have been changed.
+This is a text extraction,  supplied by the user. It includes the complete document-body text, including its wider internship and IoT sections. Images, handwritten signatures, page layout, headers, footers, and formatting are not reproduced. Extraction may join text in tables or affect spacing. Historical statements describe the original project, not the revised Ledger Lab code. No authorship declarations have been changed.
 
 The full original Word document is retained in the downloadable local package. Its direct GitHub upload was not executed because the automatic approval review could not process the large binary payload.
 
