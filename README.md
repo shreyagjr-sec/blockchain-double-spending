@@ -22,7 +22,7 @@ The first version used signed transactions, block mining, a network observer, an
 
 ## Example result
 
-In the console demo, Alice starts with 100 credits and sends 70 to Bob. A second payment of 70 is blocked because only 30 credits remain available. After mining, Alice has 30, Bob has 70, and the miner receives 10. The chain passes validation, and all 9 tests pass.
+In the console demo, Alice starts with 100 credits and sends 70 to Bob. The ledger blocks a second payment of 70 because only 30 credits remain available. After mining, Alice has 30, Bob has 70, and the miner receives 10. The chain passes validation, and all 9 tests pass.
 
 ## Screenshots
 
