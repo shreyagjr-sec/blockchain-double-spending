@@ -1,6 +1,6 @@
 # Run Ledger Lab
 
-Use Node.js 20 or newer. No extra packages are required.
+Use Node.js 20 or newer. Run the commands below from the `code` folder. No extra packages are required.
 
 - `node main.js` runs the console demo.
 - `node --test test/blockchain.test.js` runs the tests.
