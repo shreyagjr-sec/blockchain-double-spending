@@ -47,13 +47,13 @@ cd code
 node main.js
 ```
 
-Run the tests:
+From the same `code` folder, run the tests:
 
 ```sh
 node --test test/blockchain.test.js
 ```
 
-Start the dashboard:
+From the same `code` folder, start the dashboard:
 
 ```sh
 node server.js
